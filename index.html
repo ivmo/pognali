@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-grid.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="newstyle.css">
 	
 </head>
 <body>
-	<div class="mob-sidemenu-overlay">
-		
-	</div>
-	<div class="mob-sidemenu">
-		<ul>
-			<li>Купить себе</li>
-			<li>Купить в подарок</li>
-			<li>О нас</li>
-			<li>Партнерам</li>
-			<li>Корпоративные подарки</li>
-			<li>Контакты</li>
-		</ul>
-	</div>
+	<div class="nav-overlay"></div>
+	<nav class="main-nav">
+		<div class="main-nav__close">
+			<div class="main-nav__close-inner"><span></span><span></span></div>
+		</div>
+		<div class="main-nav__list">
+			<a class="main-nav__item" href="#products">Купить себе</a>
+			<a class="main-nav__item" href="#tech">Купить в подарок</a>
+			<a class="main-nav__item" href="#features">О нас</a>
+			<a class="main-nav__item" href="#testimonials">Партнерам</a>
+			<a class="main-nav__item" href="#faq">Корпоративные подарки</a>
+			<a class="main-nav__item" href="#faq">Контакты</a>
+		</div>
+	</nav>
 	<div class="top-menu">
 		<div class="mobmenu">
 			<img src="img/Menu@2x.png">
@@ -37,7 +40,6 @@
 	</div>
 	<div class="section section1">
 		<img class="logo" src="img/Logo.png" srcset="img/Logo@2x.png 2x" alt="">
-		<img class="logogo" src="img/ПоГнали.png" srcset="img/ПоГнали@2x.png 2x" alt="">
 		<div class="orangeboy"></div>
 		<div class="top-contacts">
 			<div><a href="tel:84957698330">8 (495) 769 83 30</a></div>
@@ -45,17 +47,20 @@
 			<div class="social"><img src="img/Group 69.png"><img src="img/Group 70.png"></div>
 		</div>
 		<div class="stripe"><div class="stripe_inner"></div></div>
-		<div class="cert3">3 сертификата на двоих</div>
-		<ul class="optdesc">
-			<li>в кальянную</li>
-			<li>в бар и ресторан</li>
-			<li>за впечатлениями</li>
-		</ul>
-		<div class="yellowprice">За 1590 руб.</div>
-		<div class="notdisc">Не скидка, а полноценное угощение или досуг</div>
-		<div class="button button-green">Купить себе</div>
-		<div class="button button-red">Купить в подарок</div>
-		<div class="moreinfo">Хочу узнать подробнее!</div>
+		<div class="container">
+			<img class="logogo" src="img/ПоГнали.png" srcset="img/ПоГнали@2x.png 2x" alt="">
+			<div class="cert3">3 сертификата на двоих</div>
+			<ul class="optdesc">
+				<li>в кальянную</li>
+				<li>в бар и ресторан</li>
+				<li>за впечатлениями</li>
+			</ul>
+			<div class="yellowprice">За 1590 руб.</div>
+			<div class="notdisc">Не скидка, а полноценное угощение или досуг</div>
+			<div class="button button-green">Купить себе</div>
+			<div class="button button-red">Купить в подарок</div>
+			<div class="moreinfo">Хочу узнать подробнее!</div>
+		</div>
 	</div>
 	<div class="section section2">
 		<div class="section2stripe"><div class="section2stripe_inner"></div></div>
@@ -126,9 +131,7 @@
 					<div class="card__inner">
 					  <div class="card__heading">Мы это пили 
 					  </div>
-					  <p class="card__text">
-Идеальный подарок для тех, кто знает толк в хорошей выпивке. В подарочной коробке - как любимые, так и новые коктейли, настойки, интересные сорта пива и вино в трех специализированных местах.
-					  </p>
+					  <p class="card__text">Идеальный подарок для тех, кто знает толк в хорошей выпивке. В подарочной коробке - как любимые, так и новые коктейли, настойки, интересные сорта пива и вино в трех специализированных местах.</p>
 					</div>
 				  </div>
 				  <div class="card__panel">
@@ -319,9 +322,7 @@
                 </span>
               </button>
               <div class="dropdown__content">
-                <p>
-					В каждом наборе находятся сертификаты, открывающие двери в различные заведения центра города или сертификаты на необычные развлечения! Ты никогда не узнаешь, куда заведет «Погнали!» твоего друга, пока набор не окажется в его руках. Но обещаем: если ты решишь повторить заказ (а ты решишь, ведь «Погнали!» - подарок, который нравится всем), внутри каждого нового набора будут находиться приглашения в новые места. Разумеется, пока они не закончатся на карте ;)
-				</p>
+                <p>В каждом наборе находятся сертификаты, открывающие двери в различные заведения центра города или сертификаты на необычные развлечения! Ты никогда не узнаешь, куда заведет «Погнали!» твоего друга, пока набор не окажется в его руках. Но обещаем: если ты решишь повторить заказ (а ты решишь, ведь «Погнали!» - подарок, который нравится всем), внутри каждого нового набора будут находиться приглашения в новые места. Разумеется, пока они не закончатся на карте ;)</p>
               </div>
             </li>
             <li class="dropdown dropdown-list__item js-dropdown">
@@ -333,13 +334,11 @@
                 </span>
               </button>
               <div class="dropdown__content">
-                <p>
-					Каждый сертификат – это возможность проникнуться атмосферой очередного заведения ипопробовать хиты из его меню, попробовать лучший паровой коктейль в городе или найти новое интересное увлечение!
-				</p>
-				<p>Комбинации могут быть абсолютно разными, не меняется только одно – это всегда популярные позиции и проверенные виды досуга!</p>
-				<p>Погнали экономить! В каждой коробке спрятаны сертификаты, эквивалентные более чем 4000 руб. Таким образом, по цене 1 подарка ты даришь 4!
-				</p>
-            </div></li>
+                <p>Каждый сертификат – это возможность проникнуться атмосферой очередного заведения ипопробовать хиты из его меню, попробовать лучший паровой коктейль в городе или найти новое интересное увлечение!</p>
+								<p>Комбинации могут быть абсолютно разными, не меняется только одно – это всегда популярные позиции и проверенные виды досуга!</p>
+								<p>Погнали экономить! В каждой коробке спрятаны сертификаты, эквивалентные более чем 4000 руб. Таким образом, по цене 1 подарка ты даришь 4!</p>
+							</div>
+						</li>
             <li class="dropdown dropdown-list__item js-dropdown">
               <button class="dropdown__button js-dropdown-button" aria-haspopup="true" type="button" aria-expanded="false">Как воспользоваться?
                 <span class="control control--size-md dropdown__arrow">
@@ -462,5 +461,8 @@
 		<img class="rainbowstripe" src="img/Mask Group 25@2x.png">
 		<a href="/oferta">Публичная оферта</a>
 	</footer>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>

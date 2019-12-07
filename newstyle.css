@@ -242,6 +242,7 @@ body {
 	text-transform: uppercase;
 	font: bold 24px/33px "Open Sans";
 	color: #111C38;
+	cursor: pointer;
 }
 
 .button-green {
@@ -938,6 +939,53 @@ footer a {
 	background: #f2db00;
 }
 
+.popup-callback__wrap {
+	min-width: 300px;
+}
+
+.popup-callback__pic {
+	height: 126px;
+	overflow: hidden;
+}
+
+.popup-callback__pic img {
+	width: 100%;
+	object-fit: cover;
+
+}
+
+.popup-callback__info {
+	padding: 50px 20px;
+}
+
+.popup-callback__title {
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 25px;
+	line-height: 1.2em;
+	font-weight: bold;
+}
+
+.popup-callback__title span {
+	display: block;
+	margin-bottom: 20px;
+	font-size: 18px;
+	line-height: 1.2em;
+}
+
+.popup-callback__title b {
+	font-size: 25px;
+	color: #FD5D3B;
+}
+
+.popup-callback__subtitle {
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.2em;
+}
+
+
 @media (min-width: 576px) {
   .container {
     max-width: initial;
@@ -965,6 +1013,16 @@ footer a {
 }
 
 @media (min-width: 768px) {
+	.popup-callback__wrap {
+		display: flex;
+	}
+	.popup-callback__pic {
+		width: 40%;
+		height: auto;
+	}
+	.popup-callback__pic img {
+		min-height: 100%;
+	}
 	.inst-list__item {
 		width: calc(25% - 20px);
 	}
@@ -1118,4 +1176,180 @@ footer a {
 	.section4 {
 		margin-top: 100px;
 	}
+}
+
+
+
+/* обратный звонок */
+.popup-callback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  z-index: 99999;
+  overflow: auto;
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+}
+.popup-callback--show {
+  display: flex;
+}
+.popup-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.popup-callback__inner {
+  position: relative;
+  max-width: 690px;
+  background: #fff;
+	z-index: 3;
+	margin: auto;
+}
+.popup-callback__title {
+  margin-bottom: 15px;
+  font-size: 24px;
+  line-height: 1.2em;
+  text-align: center;
+}
+.popup-callback__form {
+  max-width: 270px;
+  margin: auto;
+}
+
+.control-group {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.control-group input {
+	display: none;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.control {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	padding: 10px;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+	font-size: 18px;
+	background: #F3F4F5;
+}
+
+.control::after {
+	content: '';
+	display: block;
+	width: 8px;
+	height: 8px;
+	border: 1px solid #000;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: rotateZ(45deg) translateY(-50%);
+}
+
+.radio-var:checked ~ .control {
+	background: #FFEF5A;
+}
+
+.radio-var:checked ~ .control::after {
+	background: #FD5D3B;
+	border-color: #FD5D3B;
+}
+
+.control__title {
+	font-size: 14px;
+}
+
+.control__price {
+	font-size: 16px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.popup-callback__input {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #595959;
+  box-sizing: border-box;
+}
+.popup-callback__btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #047CCB;
+  color: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+.cross-inner {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 768px) {
+	.cross-inner {
+		background: none;
+	}
+}
+.cross {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.cross span {
+  display: block;
+  background: #595959;
+  border-radius: 2px;
+}
+.cross span:nth-child(1) {
+  height: 80%;
+  width: 4px;
+  position: absolute;
+  top: 9%;
+  left: 18px;
+  transition-delay: 0s;
+}
+.cross span:nth-child(2) {
+  width: 80%;
+  height: 4px;
+  position: absolute;
+  left: 9%;
+  top: 18px;
+  transition-delay: 0.25s;
 }

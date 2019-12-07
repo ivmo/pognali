@@ -32,4 +32,20 @@ $(document).ready(function () {
     }
   });
   $('.accordion .accordion__item').first().children('.accordion__title').trigger('click');
+
+  $('.button').on('click', function(evt) {
+    evt.preventDefault();
+    $('.popup-callback').addClass('popup-callback--show');
+  });
+  
+  $('.popup-callback').on('click', function(evt) {
+    if (
+      evt.target.classList.contains('popup-layer') ||
+      evt.target.classList.contains('cross-inner') ||
+      evt.target.classList.contains('cross') ||
+      evt.target.parentElement.classList.contains('cross')
+    ) {
+      $('.popup-callback').removeClass('popup-callback--show');
+    }
+  });
 });
